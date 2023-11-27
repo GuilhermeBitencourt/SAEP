@@ -31,18 +31,11 @@
                     ?>
                     <form action="" method="post">
                         <div class="form-group">
-                            <label for="">Name</label>
-                            <input type="text" name="name" class="form-control" required>
-                        <div class="form-group">
                             <label for="">E-mail</label>
                             <input type="email" name="email" class="form-control" required>
                         <div class="form-group">
-                            <label for="">Whatsapp</label>
+                            <label for="">Senha</label>
                             <input type="tel" name="whats" class="form-control" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{5})-([0-9]{4})" required>
-                            <span>Formato do telefone: (99) 99999-9999</span>
-                        <div class="form-group">
-                            <label for="">Endereço</label>
-                            <textarea name="address" rows="3" class="form-control" required></textarea>
                         <div class="form-group mt-3">
                             <button type="submit" name="submit" class="btn btn-primary">Cadastrar</button>
                         </div>
