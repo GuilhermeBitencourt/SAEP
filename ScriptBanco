@@ -1,0 +1,39 @@
+CREATE DATABASE Saep;
+USE Saep;
+
+CREATE TABLE atividade (
+	idAtividade int(11) NOT NULL,
+	idTurma int(11) NOT NULL,
+	FOREIGN KEY(idTurma) REFERENCES Turma(idTurma)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `professor`
+--
+
+CREATE TABLE Professor (
+	idProfessor int(11) PRIMARY KEY AUTO_INCREMENT,
+	nome varchar(255) NOT NULL,
+	cpf char(11) NOT NULL,
+	email varchar(255) NOT NULL,
+	senha varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `turma`
+--
+
+CREATE TABLE Turma (
+  idTurma int(11) PRIMARY KEY AUTO_INCREMENT,
+  idProfessor int(11) NOT NULL,
+  FOREIGN KEY(idProfessor) REFERENCES Professor(idProfessor),
+  nome varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
